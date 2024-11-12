@@ -4,14 +4,6 @@
     loader.classList.add('fade-out');
 });
 
-// Menú móvil
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
 // Scroll suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -42,7 +34,6 @@ scrollTop.addEventListener('click', () => {
 });
 
 // Animación del header
-let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     const currentScroll = window.pageYOffset;
@@ -88,4 +79,51 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.project-card, .skill-card, .timeline-item').forEach(el => {
     observer.observe(el);
+});
+
+// Menú móvil
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const header = document.querySelector('header');
+
+// Crear overlay para el menú móvil
+const overlay = document.createElement('div');
+overlay.classList.add('nav-overlay');
+document.body.appendChild(overlay);
+
+// Toggle menú móvil
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+});
+
+// Cerrar menú al hacer click en el overlay
+overlay.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+// Cerrar menú al hacer click en los enlaces
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
+
+// Cambiar estilo del header al hacer scroll
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        header.style.transform = 'translateY(0)';
+    }
+    
+    lastScroll = currentScroll;
 });

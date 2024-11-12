@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/certifications.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>Erick Torres Hernández - Ingeniero en Sistemas</title>
 </head>
 
@@ -51,7 +58,7 @@
                         <span>Contáctame</span>
                     </span>
                 </a>
-                <a href="#" class="button secondary" download>
+                <a href="pdf/cv/CV - Erick_Torres_Hernández.pdf" target="_blank" class="button secondary" download>
                     <span class="button-content">
                         <i class="fas fa-file-download"></i>
                         <span>Descargar CV</span>
@@ -81,13 +88,13 @@
                 <div class="about-image-container">
                     <div class="about-image-wrapper">
                         <!-- Reemplaza la URL con tu foto real -->
-                        <img src="./assets/perfil.png" alt="Erick Torres" class="about-image">
+                        <img src="./assets/perfil.jpeg" alt="Erick Torres" class="about-image">
                     </div>
                 </div>
                 <div class="about-info">
                     <div class="about-text">
                         <p class="introduction">
-                            Estudiante de Ingeniería en Sistemas en la Universidad Nacional, apasionado por el
+                            Diplomado en aplicaciones informáticas en la Universidad Nacional, apasionado por el
                             desarrollo de software y la innovación tecnológica.
                         </p>
                         <p class="details">
@@ -170,7 +177,7 @@
             <div class="project-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./assets/proyectos/sistema_correos_costa_rica.png" alt="Proyecto 1">
+                        <img src="./assets/proyectos/sistema_correos_costa_rica.png" loading="lazy" alt="Proyecto 1">
                     </div>
                     <div class="project-content">
                         <h3>Sistema de seguimiento y control de la flotilla vehicular</h3>
@@ -191,8 +198,18 @@
                             </span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="cta-button">Ver Proyecto</a>
-                            <a href="#" class="github-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link">
+                                <span>Ver Proyecto</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                            <a href="#" class="github-link" aria-label="Ver código en GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -256,6 +273,7 @@
                 <div class="certification-card">
                     <h3>Diplomado en aplicaciones informáticas </h3>
                     <p>Fecha de obtención: 2024</p>
+                    <a href="pdf/certificaciones/Diplomado.pdf" target="_blank" class="certification-link">Ver certificado</a>
                     <span class="certification-provider">Proveedor: Universidad Nacional de Costa Rica</span>
                 </div>
                 <div class="certification-card">
@@ -296,8 +314,8 @@
                         <p>+506 6412-5417</p>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/ErickTorres6412" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/erick-torres-hernandez-176a99292/" class="social-link"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <form class="contact-form">

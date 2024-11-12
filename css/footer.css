@@ -1,0 +1,57 @@
+/* Variables y reset */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --accent-color: #60a5fa;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --section-bg: #f3f4f6;
+    --transition: all 0.3s ease;
+    --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer mejorado */
+footer {
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--bg-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
