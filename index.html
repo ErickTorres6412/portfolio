@@ -181,8 +181,11 @@
                     </div>
                     <div class="project-content">
                         <h3>Sistema de seguimiento y control de la flotilla vehicular</h3>
-                        <p>Desarrollo de un sistema completo de seguimiento y control de la flotilla vehicular para la
-                            empresa Correos de Costa Rica</p>
+                        <div class="description-container">
+                            <p class="project-description">Sistema desarrollado para llevar el control de la flotilla vehicular de la empresa Correos de Costa Rica, incluyendo el manejo de reparaciones de vehículos, la revisión diaria de cada unidad, y la generación de reportes a través de Power BI y gráficos en el dashboard.</p>
+                            <button class="read-more-btn">Ver más</button>
+                        </div>   
+                        <p></p>
                         <div class="project-tags">
                             <span class="skill-tag laravel">
                                 <img src="./assets/iconos/laravel.png" alt="Laravel" class="skill-icon">
@@ -214,6 +217,46 @@
                     </div>
                 </div>
                 <!-- Repite project-card para más proyectos -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/proyectos/dbAdmin.png" loading="lazy" alt="Proyecto 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema de administración de base de datos</h3>
+                        <div class="description-container">
+                            <p class="project-description">Sistema de administración de bases de datos que centraliza la gestión de respaldos, optimización de consultas, administración de tablespaces, y seguridad de usuarios. La aplicación facilita tanto la creación y recuperación de respaldos como el monitoreo de rendimiento, con herramientas para auditoría y tunning de consultas, lo cual asegura un entorno de base de datos seguro y optimizado.</p>
+                            <button class="read-more-btn">Ver más</button>
+                        </div>                    
+                        <div class="project-tags">
+                            <span class="skill-tag dotnet">
+                                <img src="./assets/iconos/dotnet.png" alt=".NET" class="skill-icon">
+                                <span>.NET</span>
+                            </span>
+                            <span class="skill-tag react">
+                                <img src="./assets/iconos/react.png" alt="React" class="skill-icon">
+                                <span>React</span>
+                            </span>
+                            <span class="skill-tag oracle">
+                                <img src="./assets/iconos/oracle.png" alt="Oracle" class="skill-icon">
+                                <span>Oracle</span>
+                            </span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <span>Ver Proyecto</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/ErickTorres6412/Sistema-de-administraci-n-de-base-de-datos" class="github-link" aria-label="Ver código en GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -318,31 +361,31 @@
                         <a href="https://www.linkedin.com/in/erick-torres-hernandez-176a99292/" class="social-link"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <div class="form-input">
-                            <input type="text" id="name" required>
+                            <input type="text" id="name" name="name" required>
                             <label for="name">Nombre</label>
                             <i class="fas fa-user"></i>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-input">
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" name="email" required>
                             <label for="email">Email</label>
                             <i class="fas fa-envelope"></i>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-input">
-                            <input type="text" id="subject" required>
+                            <input type="text" id="subject" name="subject" required>
                             <label for="subject">Asunto</label>
                             <i class="fas fa-pencil-alt"></i>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-input">
-                            <textarea id="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                             <label for="message">Mensaje</label>
                             <i class="fas fa-comment-alt"></i>
                         </div>
@@ -382,7 +425,8 @@
     </footer>
 
     <script src="js/script.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/scriptContact.js"></script>
 </body>
 
 </html>

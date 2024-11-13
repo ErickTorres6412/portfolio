@@ -53,15 +53,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Formulario de contacto
-const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    alert('¡Gracias por tu mensaje! Te contactaré pronto.');
-    contactForm.reset();
-});
-
 // Animación de elementos al hacer scroll
 const observerOptions = {
     root: null,
@@ -80,6 +71,33 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.project-card, .skill-card, .timeline-item').forEach(el => {
     observer.observe(el);
 });
+
+
+//Funcion de ver mas en proyectos
+document.addEventListener('DOMContentLoaded', function() {
+    const descriptions = document.querySelectorAll('.project-description');
+    
+    descriptions.forEach(description => {
+        const container = description.closest('.description-container');
+        const button = container.querySelector('.read-more-btn');
+        const maxLength = 200; // Número máximo de caracteres
+        
+        function toggleDescription() {
+            const isCollapsed = description.classList.contains('collapsed');
+            
+            description.classList.toggle('collapsed');
+            button.textContent = isCollapsed ? 'Ver menos' : 'Ver más';
+        }
+        
+        // Verifica si el texto necesita ser recortado
+        if (description.textContent.length > maxLength) {
+            description.classList.add('collapsed');
+            button.classList.add('visible');
+            button.addEventListener('click', toggleDescription);
+        }
+    });
+});
+
 
 // Menú móvil
 const menuToggle = document.querySelector('.menu-toggle');

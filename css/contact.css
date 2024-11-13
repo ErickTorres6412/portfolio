@@ -168,6 +168,49 @@
     left: 100%;
 }
 
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    border-left: 4px solid #4CAF50;
+}
+
+.notification.error {
+    border-left: 4px solid #f44336;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification i {
+    font-size: 1.2em;
+}
+
+.notification.success i {
+    color: #4CAF50;
+}
+
+.notification.error i {
+    color: #f44336;
+}
+
 /* Tabletas grandes y pantallas medianas */
 @media screen and (max-width: 1024px) {
     .contact-content {
