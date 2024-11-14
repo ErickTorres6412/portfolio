@@ -197,6 +197,37 @@ body {
     color: white;
 }
 
+.Racket {
+    background: rgba(179, 76, 122, 0.1); /* Fondo suave en color similar al logo de Racket */
+    color: #B34C7A; /* Color del texto inspirado en el logo de Racket */
+}
+
+.Racket:hover {
+    background: rgba(179, 76, 122, 0.6); /* Fondo más fuerte al pasar el mouse */
+    color: white; /* Texto blanco para contraste */
+}
+
+.html {
+    background: rgba(227, 79, 38, 0.1); /* Fondo suave basado en el logo de HTML5 */
+    color: #E34F26; /* Color del texto en rojo HTML */
+}
+
+.html:hover {
+    background: rgba(227, 79, 38, 0.6); /* Fondo en rojo HTML más fuerte al pasar el mouse */
+    color: white;
+}
+
+.Bootstrap {
+    background: rgba(86, 61, 124, 0.1); /* Fondo suave con tono morado de Bootstrap */
+    color: #563D7C; /* Color del texto basado en Bootstrap */
+}
+
+.Bootstrap:hover {
+    background: rgba(86, 61, 124, 0.6); /* Fondo morado más intenso al pasar el mouse */
+    color: white;
+}
+
+
 /* Efecto hover general */
 .skill-tag:hover {
     transform: translateY(-2px);
@@ -243,4 +274,42 @@ body {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+/*Animaciones*/
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variaciones de animaciones */
+.slide-left {
+    transform: translateX(-100px);
+}
+
+.slide-right {
+    transform: translateX(100px);
+}
+
+.fade-in {
+    transform: scale(0.9);
+}
+
+header {
+    transition: transform 0.3s ease;
+}
+
+.scroll-down {
+    transform: translateY(-100%);
+}
+
+.scroll-up {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }

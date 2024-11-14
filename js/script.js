@@ -53,25 +53,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Animación de elementos al hacer scroll
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.project-card, .skill-card, .timeline-item').forEach(el => {
-    observer.observe(el);
-});
-
 
 //Funcion de ver mas en proyectos
 document.addEventListener('DOMContentLoaded', function() {

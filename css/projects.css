@@ -17,8 +17,9 @@
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -37,7 +38,7 @@
 
 .project-image {
     width: 100%;
-    height: 200px;
+    min-height: 200px; /* En lugar de height fijo */
     background: #e5e7eb;
     position: relative;
     overflow: hidden;
@@ -45,8 +46,7 @@
 
 .project-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* En lugar de 100% */
     transition: var(--transition);
 }
 
@@ -132,7 +132,12 @@
 }
 
 .description-container {
+    margin-top: 10px;
     position: relative;
+}
+
+.description-container p {
+    text-align: justify;
 }
 
 .project-description {
@@ -178,11 +183,19 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
     }
+
+    .project-image {
+        min-height: 160px; /* En lugar de height fijo */
+    }
 }
 
 @media screen and (max-width: 992px) {
     .projects {
         padding: 4rem 0;
+    }
+
+    .project-image {
+        min-height: 150px; /* En lugar de height fijo */
     }
 
     .project-content h3 {
@@ -233,6 +246,10 @@
     .read-more-btn {
         bottom: -30px; /* Más espacio para el botón en móviles */
     }
+
+    .project-image {
+        min-height: 160px; /* En lugar de height fijo */
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -259,6 +276,10 @@
 
     .project-links {
         justify-content: space-between;
+    }
+
+    .project-image {
+        min-height: 140px; /* En lugar de height fijo */
     }
 }
 
